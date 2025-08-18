@@ -7,20 +7,20 @@
   <meta name="description" content="A step-by-step business journal to gain clarity and build strategy." />
   <style>
     :root{
-      --bg:#000000;         /* black background */
-      --text:#f5f5f5;       /* near-white text */
-      --muted:#c4c4c4;      /* muted grey */
-      --accent:#fbbf24;     /* amber */
+      --bg:#000000;
+      --text:#f5f5f5;
+      --muted:#c4c4c4;
+      --accent:#fbbf24;
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
-    .wrap{max-width:960px;margin:0 auto;padding:24px}
+    .wrap{max-width:1200px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:18px 0}
     .pill{border:1px solid #333;border-radius:999px;padding:6px 12px;color:var(--muted);font-size:.85rem;background:#0a0a0a}
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;margin-top:18px}
-    /* keep the grey cards */
     .card{background:#f3f4f6;border:1px solid #e5e7eb;border-radius:18px;padding:22px;box-shadow:0 4px 12px rgba(0,0,0,.25);color:#111}
     h1{font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.1;margin:0 0 12px;color:#111}
+    h2{margin-top:0;color:#111}
     p{color:#444;line-height:1.6}
     .price{display:flex;flex-direction:column;gap:4px;margin:14px 0 18px}
     .price .amt{font-size:2rem;font-weight:800;color:#000}
@@ -32,8 +32,10 @@
     .secure{display:flex;align-items:center;gap:8px;color:#555;font-size:.9rem;margin-top:8px}
     .gallery img{max-width:100%;border-radius:12px;display:block}
     .section{margin-top:38px}
+    .bio{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
+    .bio img{max-width:100%;border-radius:12px}
     .footer{margin:40px 0 16px;color:var(--muted);font-size:.9rem}
-    @media (max-width:880px){.hero{grid-template-columns:1fr}.pill{display:none}}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}.pill{display:none}.bio{grid-template-columns:1fr}}
   </style>
 </head>
 <body>
@@ -56,15 +58,12 @@
           This journal is your structured companion to build strategy with clarity. It’s designed to help you focus, plan, and take action without overwhelm.
         </p>
         <div class="btns">
-          <!-- PayPal payment link -->
           <a class="btn primary" href="https://www.paypal.me/HadiyaEdmund" target="_blank" rel="noopener">
             Buy now — Pay with PayPal
           </a>
-          <!-- Wise payment link -->
           <a class="btn secondary" href="https://wise.com/pay/me/hadiyaanisae" target="_blank" rel="noopener">
             Pay via Wise
           </a>
-          <!-- Endcash payment link -->
           <a class="btn secondary" href="https://endcash.me/Nissysthoughtsaboutstuff" target="_blank" rel="noopener">
             Pay with Endcash
           </a>
@@ -73,8 +72,23 @@
       </div>
 
       <div class="gallery card">
-        <!-- Use your uploaded cover image -->
-        <img src="cover.jpg" alt="Clarity to Growth Journal Cover" />
+        <img src="WhatsApp-Image-cover.jpg" alt="Clarity to Growth Journal Cover" />
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>About the Author</h2>
+      <div class="bio">
+        <div>
+          <p>
+            Hi, I’m <strong>Anisa Hadiya Edmund</strong> — Marketing Strategist, Brand Builder, and Vision Partner.
+            I am passionate about helping entrepreneurs and businesses find clarity and direction.
+            Through workshops, strategy sessions, and this journal, my mission is to empower you to grow with intention.
+          </p>
+        </div>
+        <div>
+          <img src="speaking.jpeg" alt="Anisa Hadiya Edmund speaking at an event" />
+        </div>
       </div>
     </section>
 
