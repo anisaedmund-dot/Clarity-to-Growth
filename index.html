@@ -26,9 +26,10 @@
     .price .amt{font-size:2rem;font-weight:800;color:#000}
     .price .alt{font-size:1rem;color:#222}
     .btns{display:flex;flex-wrap:wrap;gap:12px}
-    a.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;border:1px solid #ccc}
+    a.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;border:1px solid #ccc;transition:all .2s}
     a.primary{background:var(--accent);color:#111827;border-color:var(--accent)}
     a.secondary{background:transparent;color:#111}
+    a.btn:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(0,0,0,.15)}
     .secure{display:flex;align-items:center;gap:8px;color:#555;font-size:.9rem;margin-top:8px}
     .gallery img{max-width:100%;border-radius:12px;display:block}
     .section{margin-top:38px}
@@ -36,6 +37,11 @@
     .bio img{max-width:100%;border-radius:12px}
     .note{font-size:.9rem;color:#555;margin-top:8px}
     .footer{margin:40px 0 16px;color:var(--muted);font-size:.9rem}
+    .code-section{margin-top:28px;padding:22px;background:#1f2937;color:#f5f5f5;border-radius:12px}
+    .code-section h2{color:#fbbf24;margin-bottom:10px}
+    .code-section input{padding:10px 14px;border-radius:8px;border:1px solid #ccc;width:220px;margin-right:8px;font-size:1rem}
+    .code-section button{padding:10px 16px;border-radius:8px;border:none;background:var(--accent);font-weight:700;font-size:1rem;color:#111827;cursor:pointer;transition:all .2s}
+    .code-section button:hover{background:#fcd34d;transform:translateY(-1px)}
     @media (max-width:880px){.hero{grid-template-columns:1fr}.pill{display:none}.bio{grid-template-columns:1fr}}
   </style>
 </head>
@@ -96,6 +102,17 @@
         </div>
         <div class="note">After checkout you’ll be redirected to a secure download page.</div>
         <div class="secure">🔒 Secure checkout • You’ll also get the file by email</div>
+
+        <!-- CODE REDEMPTION SECTION UNDER PAYMENT OPTIONS -->
+        <div class="code-section">
+          <h2>Have a Download Code?</h2>
+          <p>Enter your code below to access the download page:</p>
+          <form onsubmit="event.preventDefault(); validateCode();">
+            <input type="text" id="codeInput" placeholder="Enter code" required />
+            <button type="submit">Submit</button>
+          </form>
+          <p id="codeMessage" style="margin-top:12px;color:#fbbf24"></p>
+        </div>
       </div>
 
       <div class="gallery card">
@@ -112,5 +129,19 @@
 
     <footer class="footer">© 2025 Clarity to Growth • All rights reserved.</footer>
   </div>
+
+  <script>
+    function validateCode(){
+      const input = document.getElementById('codeInput').value.trim();
+      const message = document.getElementById('codeMessage');
+      // Updated codes
+      const validCodes = ["FREE2025", "TEST123", "WISE", "ENDCASH"];
+      if(validCodes.includes(input)){
+        window.location.href = "download.html";
+      } else {
+        message.textContent = "Invalid code. Please try again.";
+      }
+    }
+  </script>
 </body>
 </html>
