@@ -7,28 +7,30 @@
   <meta name="description" content="A step-by-step business journal to gain clarity and build strategy." />
   <style>
     :root{
-      --bg:#ffffff;
-      --text:#111111;
-      --muted:#444444;
-      --accent:#fbbf24;
+      --bg:#000000;         /* black background */
+      --text:#f5f5f5;       /* near-white text */
+      --muted:#c4c4c4;      /* muted grey */
+      --accent:#fbbf24;     /* amber */
     }
     *{box-sizing:border-box}
     body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--text)}
     .wrap{max-width:960px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:18px 0}
-    .pill{border:1px solid #ddd;border-radius:999px;padding:6px 12px;color:var(--muted);font-size:.85rem}
+    .pill{border:1px solid #333;border-radius:999px;padding:6px 12px;color:var(--muted);font-size:.85rem;background:#0a0a0a}
     .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;margin-top:18px}
-    .card{background:#fafafa;border:1px solid #ddd;border-radius:18px;padding:22px;box-shadow:0 4px 12px rgba(0,0,0,.05)}
-    h1{font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.1;margin:0 0 12px}
-    p{color:var(--muted);line-height:1.6}
-    .price{display:flex;align-items:baseline;gap:8px;margin:14px 0 18px}
-    .price .amt{font-size:2.1rem;font-weight:800;color:var(--accent)}
+    /* keep the grey cards */
+    .card{background:#f3f4f6;border:1px solid #e5e7eb;border-radius:18px;padding:22px;box-shadow:0 4px 12px rgba(0,0,0,.25);color:#111}
+    h1{font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.1;margin:0 0 12px;color:#111}
+    p{color:#444;line-height:1.6}
+    .price{display:flex;flex-direction:column;gap:4px;margin:14px 0 18px}
+    .price .amt{font-size:2rem;font-weight:800;color:#000}
+    .price .alt{font-size:1rem;color:#222}
     .btns{display:flex;flex-wrap:wrap;gap:12px}
     a.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;border:1px solid #ccc}
     a.primary{background:var(--accent);color:#111827;border-color:var(--accent)}
-    a.secondary{background:transparent;color:#111111}
-    .secure{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.9rem;margin-top:8px}
-    .gallery{aspect-ratio:4/5;border-radius:16px;background:#eee;border:1px dashed #ccc;display:grid;place-items:center;color:#666}
+    a.secondary{background:transparent;color:#111}
+    .secure{display:flex;align-items:center;gap:8px;color:#555;font-size:.9rem;margin-top:8px}
+    .gallery img{max-width:100%;border-radius:12px;display:block}
     .section{margin-top:38px}
     .footer{margin:40px 0 16px;color:var(--muted);font-size:.9rem}
     @media (max-width:880px){.hero{grid-template-columns:1fr}.pill{display:none}}
@@ -43,10 +45,11 @@
     <section class="hero">
       <div class="card">
         <h1>The Clarity to Growth Journal
-          <span style="display:block;font-size:1rem;font-weight:600;color:var(--muted);margin-top:6px">A step-by-step guide to gain clarity and build strategy.</span>
+          <span style="display:block;font-size:1rem;font-weight:600;color:#555;margin-top:6px">A step-by-step guide to gain clarity and build strategy.</span>
         </h1>
         <div class="price">
-          <div class="amt">$25</div>
+          <div class="amt">US $15.99</div>
+          <div class="alt">or TTD $100</div>
           <div class="muted">one-time • PDF (A4 + US Letter)</div>
         </div>
         <p>
@@ -62,7 +65,7 @@
             Pay via Wise
           </a>
           <!-- Endcash payment link -->
-          <a class="btn secondary" href="endcash.me/Nissysthoughtsaboutstuff" target="_blank" rel="noopener">
+          <a class="btn secondary" href="https://endcash.me/Nissysthoughtsaboutstuff" target="_blank" rel="noopener">
             Pay with Endcash
           </a>
         </div>
@@ -70,8 +73,8 @@
       </div>
 
       <div class="gallery card">
-        <!-- Replace the placeholder below with your cover image -->
-        <img src="cover.jpg" alt="Clarity to Growth Journal Cover" style="max-width:100%; border-radius:12px;" />
+        <!-- Use your uploaded cover image -->
+        <img src="cover.jpg" alt="Clarity to Growth Journal Cover" />
       </div>
     </section>
 
@@ -79,7 +82,7 @@
       <h2>FAQ</h2>
       <p><strong>How do I receive the file?</strong> After payment you’ll see a download page and an email with a secure link.</p>
       <p><strong>Refunds?</strong> Because this is a digital product, all sales are final. If you have trouble with the file, contact us and we’ll help.</p>
-      <p><strong>Contact</strong>: <a href="mailto:anisaedmund@gmail.com">you@claritytogrowth.com</a></p>
+      <p><strong>Contact</strong>: <a href="mailto:anisaedmund@gmail.com">anisaedmund@gmail.com</a></p>
     </section>
 
     <footer class="footer">© 2025 Clarity to Growth • All rights reserved.</footer>
