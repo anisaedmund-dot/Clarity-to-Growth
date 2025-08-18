@@ -1,0 +1,126 @@
+echo "# Clarity-to-Growth" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/anisaedmund-dot/Clarity-to-Growth.git
+git push -u origin main
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Business Journal by {{Your Brand}}</title>
+  <meta name="description" content="A simple one‑page site to sell a digital Business Journal." />
+  <style>
+    :root{
+      --bg:#0f172a; /* slate-900 */
+      --card:#111827; /* gray-900 */
+      --text:#e5e7eb; /* gray-200 */
+      --muted:#9ca3af; /* gray-400 */
+      --accent:#fbbf24; /* amber-400 */
+      --accent-2:#22c55e; /* green-500 */
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Helvetica,Arial,sans-serif;background:linear-gradient(180deg,#0b1025, #0f172a 40%, #0b1025);color:var(--text)}
+    .wrap{max-width:960px;margin:0 auto;padding:24px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:18px 0}
+    .logo{font-weight:800;letter-spacing:.4px}
+    .pill{border:1px solid #243042;border-radius:999px;padding:6px 12px;color:var(--muted);font-size:.85rem}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;margin-top:18px}
+    .card{background:linear-gradient(180deg,#111827, #0b1220);border:1px solid #1f2937;border-radius:18px;padding:22px;box-shadow:0 10px 30px rgba(0,0,0,.3)}
+    h1{font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.1;margin:0 0 12px}
+    p{color:var(--muted);line-height:1.6}
+    .price{display:flex;align-items:baseline;gap:8px;margin:14px 0 18px}
+    .price .amt{font-size:2.1rem;font-weight:800;color:var(--accent)}
+    .btns{display:flex;flex-wrap:wrap;gap:12px}
+    a.btn{display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:12px;text-decoration:none;font-weight:700;border:1px solid #253244}
+    a.primary{background:var(--accent);color:#111827;border-color:var(--accent)}
+    a.secondary{background:transparent;color:#e5e7eb}
+    .secure{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:.9rem;margin-top:8px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .feat{padding:14px;border:1px solid #1f2937;border-radius:14px;background:#0d1426}
+    .gallery{aspect-ratio:4/5;border-radius:16px;background:linear-gradient(180deg,#101a34,#0a1020);border:1px dashed #22314a;display:grid;place-items:center;color:#93c5fd}
+    .section{margin-top:38px}
+    .dl{display:grid;gap:10px}
+    .footer{margin:40px 0 16px;color:var(--muted);font-size:.9rem}
+    @media (max-width:880px){.hero{grid-template-columns:1fr}.features{grid-template-columns:1fr 1fr}.pill{display:none}}
+    @media (max-width:560px){.features{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <!-- ✨ Replace {{Your Brand}} and placeholders below.  
+       🔗 Paste your live payment links where indicated.  
+       ✅ Works with Stripe Payment Link (auto‑delivery via your tool) + Wise Payment Link (manual or semi‑auto). -->
+  <div class="wrap">
+    <header>
+      <div class="logo">{{Your Brand}}</div>
+      <div class="pill">Instant digital download</div>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <h1>The Business Journal
+          <span style="display:block;font-size:1rem;font-weight:600;color:var(--muted);margin-top:6px">Plan, track and grow your business — in one guided PDF.</span>
+        </h1>
+        <div class="price">
+          <div class="amt">$25</div>
+          <div class="muted">one‑time • PDF (A4 + US Letter)</div>
+        </div>
+        <p>
+          A practical, fillable journal designed for founders: goal setting, content calendars, revenue trackers, project canvases, and weekly reviews. Print it or use it on an iPad.
+        </p>
+        <div class="btns">
+          <!-- Stripe / SendOwl / Payhip etc. Use this for instant fulfilment -->
+          <a class="btn primary" href="YOUR_STRIPE_OR_ECOM_PAYMENT_LINK" target="_blank" rel="noopener">
+            Buy now — instant download
+          </a>
+          <!-- Wise Payment Link (card or bank). Fulfilment may be manual or via automation. -->
+          <a class="btn secondary" href="YOUR_WISE_PAYMENT_LINK" target="_blank" rel="noopener">
+            Pay via Wise
+          </a>
+        </div>
+        <div class="secure">🔒 Secure checkout • You’ll also get the file by email</div>
+        <div class="section dl">
+          <strong>What’s inside</strong>
+          <ul>
+            <li>Quarterly + monthly planning templates</li>
+            <li>Content & campaign calendars</li>
+            <li>Sales, expense & profit trackers</li>
+            <li>Project canvas & weekly review pages</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="gallery card">
+        <!-- Swap this placeholder with your cover image -->
+        <div>Upload your cover image here</div>
+      </div>
+    </section>
+
+    <section class="features section">
+      <div class="feat">
+        <h3>Designed for results</h3>
+        <p>Clear prompts and data tables that actually drive action.</p>
+      </div>
+      <div class="feat">
+        <h3>Fillable & printable</h3>
+        <p>Use on GoodNotes/Notability or print and bind at home.</p>
+      </div>
+      <div class="feat">
+        <h3>Free updates</h3>
+        <p>Get future revisions to the journal at no extra cost.</p>
+      </div>
+    </section>
+
+    <section class="section card">
+      <h2>FAQ</h2>
+      <p><strong>How do I receive the file?</strong> After payment you’ll see a download page and an email with a secure link. Wise payments may take a few minutes to confirm.</p>
+      <p><strong>Refunds?</strong> Because this is a digital product, all sales are final. If you have trouble with the file, contact us and we’ll help.</p>
+      <p><strong>Contact</strong>: <a href="mailto:you@yourbrand.com">you@yourbrand.com</a></p>
+    </section>
+
+    <footer class="footer">© {{Year}} {{Your Brand}} • All rights reserved.</footer>
+  </div>
+</body>
+</html>
