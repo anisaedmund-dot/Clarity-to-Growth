@@ -17,8 +17,8 @@
     .wrap{max-width:1200px;margin:0 auto;padding:24px}
     header{display:flex;align-items:center;justify-content:flex-end;gap:12px;padding:18px 0}
     .pill{border:1px solid #333;border-radius:999px;padding:6px 12px;color:var(--muted);font-size:.85rem;background:#0a0a0a}
-    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center;margin-top:18px}
-    .card{background:#f3f4f6;border:1px solid #e5e7eb;border-radius:18px;padding:22px;box-shadow:0 4px 12px rgba(0,0,0,.25);color:#111}
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:stretch;margin-top:18px}
+    .card{background:#f3f4f6;border:1px solid #e5e7eb;border-radius:18px;padding:22px;box-shadow:0 4px 12px rgba(0,0,0,.25);color:#111;display:flex;flex-direction:column;justify-content:space-between}
     h1{font-size:clamp(1.8rem,3.4vw,3rem);line-height:1.1;margin:0 0 12px;color:#111}
     h2{margin-top:0;color:#111}
     p{color:#444;line-height:1.6}
@@ -31,7 +31,8 @@
     a.secondary{background:transparent;color:#111}
     a.btn:hover{transform:translateY(-2px);box-shadow:0 4px 10px rgba(0,0,0,.15)}
     .secure{display:flex;align-items:center;gap:8px;color:#555;font-size:.9rem;margin-top:8px}
-    .gallery img{max-width:100%;border-radius:12px;display:block}
+    .gallery{display:flex;align-items:center;justify-content:center}
+    .gallery img{width:100%;height:auto;max-height:600px;object-fit:contain;border-radius:12px;display:block}
     .section{margin-top:38px}
     .bio{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:center}
     .bio img{max-width:100%;border-radius:12px}
@@ -69,7 +70,7 @@
           </p>
         </div>
         <div>
-          <img src="assets/speaking.jpeg" alt="Anisa Hadiya Edmund speaking at an event" />
+          <img src="assets/speaking.JPG" alt="Anisa Hadiya Edmund speaking at an event" />
         </div>
       </div>
     </section>
@@ -126,6 +127,7 @@
         <img src="assets/cover.JPG" alt="Clarity to Growth Journal Cover" />
       </div>
     </section>
+
 
     <!-- CHILDREN’S BOOKS SECTION -->
     <section class="section card">
